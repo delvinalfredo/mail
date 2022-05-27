@@ -1,0 +1,19 @@
+a.InsideHead2.ant-dropdown-trigger {
+    color: black;
+}
+
+.InsideHead2 {
+    margin-left: 10.5em;
+    font-weight: 345;
+    font-size: 17px;
+}
+
+.Pubs {
+    color: #359D9E;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.ant-btn-text:hover{
+    color: #359D9E;
+}

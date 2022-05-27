@@ -1,0 +1,37 @@
+.kiri {
+    float: left;
+}
+
+.kanan{
+    float: right;
+    margin-left: 1em;
+}
+
+button.ant-btn.ant-btn-default.send {
+    background-color: #09AB8A;
+    border-color: #09AB8A;
+}
+
+button.ant-btn.ant-btn-default.send:active:enabled {
+    background-color: #DF9F30;
+    animation-name: myfirst;
+  animation-duration: 2s;
+}
+
+button.ant-btn.ant-btn-default.send:focus:enabled {
+    background-color: #DF9F30;
+    animation-name: myfirst;
+  animation-duration: 2s;
+}
+
+button.ant-btn.ant-btn-default.send:target:enabled {
+    background-color: #DF9F30;
+    animation-name: myfirst;
+  animation-duration: 2s;
+}
+
+@keyframes myfirst
+{
+    from {background-color: #09AB8A;}
+  to {background-color: #DF9F30;}
+}

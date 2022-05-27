@@ -1,0 +1,11 @@
+@import '~antd/dist/antd.css';
+
+.ant-layout-footer{
+    text-align: left;
+    padding: 24px 1em;
+}
+
+.ant-breadcrumb ol {
+    margin: 0 0 0;
+    padding: 0 0 0;
+}

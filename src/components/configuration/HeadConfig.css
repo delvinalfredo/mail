@@ -1,0 +1,20 @@
+.HeadConfig{
+    box-shadow: 1px 2px 10px -2px rgb(0 0 0 / 36%);
+    -webkit-box-shadow: 1px 2px 10px -2px rgb(0 0 0 / 36%);
+
+    background-color: white;
+}
+
+a.InsideHead.ant-dropdown-trigger {
+    color: #359D9E;
+}
+
+.InsideHead {
+    margin-left: 10.5em;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.ant-layout-header {
+    line-height: 65px;
+}
