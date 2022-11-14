@@ -85,8 +85,8 @@ const ParticipantEdit = () => {
     // const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/;
     if (email === "") {
       return alert("Input your email");
-    // } else if (email || regex.test(email) === false) {
-    //   alert("Need @ on email");
+      // } else if (email || regex.test(email) === false) {
+      //   alert("Need @ on email");
     } else {
       return true;
     }
@@ -95,43 +95,43 @@ const ParticipantEdit = () => {
   const handleSubmitEdit = (e) => {
     e.preventDefault();
     if (handleValidation()) {
-    const newData = {
-      publisherId: id,
-      title: title,
-      first_name: firstname,
-      last_name: lastname,
-      email: email,
-    };
-    test(kid);
-    editParticipant(newData, id);
-    setTitle("");
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setIsModalVisible(false);
-  }
+      const newData = {
+        publisherId: id,
+        title: title,
+        first_name: firstname,
+        last_name: lastname,
+        email: email,
+      };
+      test(kid);
+      editParticipant(newData, id);
+      setTitle("");
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setIsModalVisible(false);
+    }
   };
 
   const handleSubmitNew = (e) => {
     e.preventDefault();
     const idint = parseInt(kid);
     if (handleValidation()) {
-    const newData = {
-      publisherId: idint,
-      title: title,
-      first_name: firstname,
-      last_name: lastname,
-      email: email,
-    };
-    console.log(newData);
-    createParticipant(newData);
-    setTitle("");
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    test(kid);
-    setIsModalVisible2(false);
-  }
+      const newData = {
+        publisherId: idint,
+        title: title,
+        first_name: firstname,
+        last_name: lastname,
+        email: email,
+      };
+      console.log(newData);
+      createParticipant(newData);
+      setTitle("");
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      test(kid);
+      setIsModalVisible2(false);
+    }
   };
 
   const handleDelete = () => {
@@ -219,10 +219,11 @@ const ParticipantEdit = () => {
           }
           return copy;
         });
-        const data = {participantData: copy, publisherId:copy[0].publisher}
+        
+        const data = { participantData: copy, publisherId: copy[0].publisher };
         setNewRows(data);
 
-        if (copy.length === 0) {
+        if (data.length === 0) {
           message.error("No data found in file!");
           return false;
         } else {
@@ -422,7 +423,7 @@ const ParticipantEdit = () => {
               <p className="ant-upload-hint">Or Click to Upload</p>
             </Dragger>
           </div>
-          
+
           <div style={{ marginTop: 20 }}>
             <Table dataSource={rows}>
               <Column title="Title" dataIndex="title" />
@@ -432,7 +433,6 @@ const ParticipantEdit = () => {
               <Column title="Email Sending Status" dataIndex="status" />
             </Table>
           </div>
-          
         </Modal>
       </div>
 

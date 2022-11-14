@@ -210,6 +210,7 @@ const Publisher = () => {
           <Button
             onClick={() => {
               window.location.href = "/publisher/form";
+              console.log("err");
             }}
             style={{
               backgroundColor: "#449342",

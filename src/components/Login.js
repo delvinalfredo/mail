@@ -47,7 +47,7 @@ const Login = () => {
 
   return (
     <div className="Login">
-      <Row>
+      <Row >
         <Col span={12} className="side">
           <img src="./side.png" alt="sideimg"></img>
         </Col>

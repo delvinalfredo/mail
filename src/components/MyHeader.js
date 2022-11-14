@@ -34,14 +34,14 @@ const MyHeader = () => {
       className="Head"
       style={{ position: "static", zIndex: 1, width: "100%", margin: 0 }}
     >
-      <img
+      {/* <img
         style={{ margin: 10, float: "left", height: 42 }}
         src="/logo.png"
         alt="THRM"
         onClick={() => {
           window.location.href ="/mail-template";
         }}
-      ></img>
+      ></img> */}
       <Input placeholder="Search ..." style={{ width: 300, margin: 15 }} />
       <div className="Option" style={{ float: "right" }}>
         <Dropdown overlay={menu} trigger={["click"]}>

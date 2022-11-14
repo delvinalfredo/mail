@@ -81,7 +81,7 @@ const ParticipationList = (props) => {
     // const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/;
     if (email === "") {
       return alert("Input your email");
-    // } else if (email || regex.test(email) === false) {
+      // } else if (email || regex.test(email) === false) {
       // alert("Need @ on email");
     } else {
       return true;
@@ -160,7 +160,7 @@ const ParticipationList = (props) => {
   };
 
   const handleOk3 = () => {
-    // createParticipantExcel(newRows);
+    createParticipantExcel(newRows);
     console.log(newRows);
     setIsModalVisible3(false);
   };
@@ -198,12 +198,14 @@ const ParticipationList = (props) => {
     }
 
     ExcelRenderer(fileObj, (err, resp) => {
+      
       if (err) {
         // console.log(err);
         message.error("Cannot render Excel!");
       } else {
         const copy = [...newRows];
         resp.rows.slice(1).map((row, index) => {
+          
           if (row && row !== "undefined") {
             copy.push({
               publisherId: props.publisherID,
@@ -217,7 +219,8 @@ const ParticipationList = (props) => {
           return copy;
         });
         
-        setNewRows(copy);
+        const data = { participantData: copy, publisherId: copy[0].publisher};
+        setNewRows(data);
 
         if (copy.length === 0) {
           message.error("No data found in file!");

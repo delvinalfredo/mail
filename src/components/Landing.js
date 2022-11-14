@@ -6,19 +6,15 @@ const Landing = () => {
   document.body.style.backgroundImage = "url('./landing.png')";
   return (
     <div className="Landing">
-      <div className="logo">
-        <img src="./talentlogo.png" alt="logo"></img>
-      </div>
       <div className="talent">
-        <p>TALENTHRM</p>
+        <p>DELVIN ALFREDO BINNENDIJK</p>
       </div>
       <div className="sub">
-        <p>Communication Platform</p>
+        <p>EMAIL BLAST</p>
       </div>
       <div className="desc">
         <p>
-          Platform for communicating businees email, marketing campaign and
-          newsletter.
+          Send emails from lists
         </p>
       </div>
       <div className="start">
